@@ -6,4 +6,6 @@
 # 
 # All rights reserved - Do Not Redistribute
 #
-include_recipe "mariadb"
+include_recipe "chef-mariadb"
+include_recipe "chef-mariadb::server"
+
