@@ -6,6 +6,9 @@
 # 
 # All rights reserved - Do Not Redistribute
 #
-include_recipe "chef-mariadb"
-include_recipe "chef-mariadb::server"
-
+include_recipe "mariadb"
+include_recipe "mariadb::client"
+node.default.mariadb.server_root_password = "uPdOwntUrnaRoundbIzarre89"
+node.default.mariadb.server_repl_password = "uPdOwntUrnaRoundbIzarre89"
+node.default.mariadb.server_debian_password = "uPdOwntUrnaRoundbIzarre89"
+include_recipe "mariadb::server"

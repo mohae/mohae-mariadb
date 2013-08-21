@@ -7,6 +7,12 @@ node.default.mariadb.allow_remote_root      = FALSE
 node.default.mariadb.remove_test_Database   = TRUE
 #node.default.mariadb.log_dir = node['mariadb']['data_dir']
 
+# platform specific
+case node['platform_family']
+  when "rhel", "fedora"
+    node.default.mariadb.version                = '5.5'
+end
+
 # tunables- my.cnf settings
 # check chef-mariadb/attributes/server.rb for complete list
 

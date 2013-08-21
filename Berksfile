@@ -1,4 +1,4 @@
 site :opscode
 
 metadata
-cookbook "chef-mariadb"     , github: "mohae/chef-mariadb"
+cookbook "mariadb"     , github: "mohae/chef-mariadb"
